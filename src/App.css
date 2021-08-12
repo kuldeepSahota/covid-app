@@ -1,38 +1,116 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@200;300;500&display=swap");
+
+body {
+  font-family: "Georama", sans-serif;
+}
+
+thead.thead-dark {
+  background: #1f1f1f;
+  color: #e9e9e9;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+}
+h1 {
+  font-family: "Georama", sans-serif;
+}
+th,
+td {
+  font-family: "Georama", sans-serif;
+  font-weight: 400;
+}
+
+.line-1 {
+  position: relative;
+  top: 50%;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+tr th:first-child,
+tr td:first-child {
+  padding-left: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+tr td:nth-child(2):hover {
+  background: blue;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+tr td:nth-child(4):hover {
+  background: red;
+  color: #fff;
+}
+tr td:nth-child(3):hover {
+  background: #4c9a2a;
+  color: #fff;
+}
+tr td:nth-child(5):hover {
+  background: #ffff00;
+  color: #000;
+}
+h1 span {
+  color: #4c9a2a;
+}
+.head.text-center.line-1.anim-typewriter {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 150px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.head.text-center.line-1.anim-typewriter img {
+  width: 130px;
+  margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.main_heading {
+  max-height: 190px;
 }
 
-@keyframes App-logo-spin {
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(46) 1s 1 normal both,
+    blinkTextCursor 500ms steps(46) infinite normal;
+}
+@keyframes typewriter {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 25em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px !important;
+  }
+  .head.text-center.line-1.anim-typewriter {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .anim-typewriter {
+    animation: none;
   }
 }
