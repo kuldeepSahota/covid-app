@@ -24,7 +24,7 @@ const Covid = () => {
                 <div className="main_heading">
                     <div className="head text-center line-1 anim-typewriter">
                     <img src={flag} alt="img" />
-                    <h1> <span style={{fontWeight:'bold'}}>INDIA</span> covid 19 live tracker app</h1>
+                    <h1> <span style={{fontWeight:'bold'}}>INDIA</span> covid 19 live tracker app </h1>
                     </div>
                     
                 </div>
